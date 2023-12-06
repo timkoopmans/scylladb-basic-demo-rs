@@ -1,6 +1,6 @@
 # Rust ScyllaDB Project
 
-This project is a Rust application that interfaces with ScyllaDB, 
+This project is a Rust application that interfaces with [ScyllaDB](https://scylladb.com), 
 a highly performant NoSQL database, for basic CRUD (Create, Read, Update, Delete) operations. 
 It uses the `scylla` crate to interact with the database and demonstrates operations like 
 adding, reading, updating, and deleting user data.
@@ -28,20 +28,13 @@ To run ScyllaDB locally, you can use Docker Compose. Here's a simple setup:
 
 To run the Rust application:
 
-1. **Clone the repository** (if you haven't already):
-
-    ```bash
-    git clone <repository-url>
-    cd <repository-directory>
-    ```
-
-2. **Build the project**:
+1. **Build the project**:
 
     ```bash
     cargo build
     ```
 
-3. **Run the application**:
+2. **Run the application**:
 
     ```bash
     cargo run
