@@ -1,0 +1,27 @@
+version: '3'
+services:
+  scylladb:
+    image: scylladb/scylla:latest
+    ports:
+      - "9042:9042"
+    volumes:
+      - scylla_data:/var/lib/scylla
+    networks:
+      - scylla-network
+
+  cqlsh:
+    image: scylladb/scylla-cqlsh:latest
+    volumes:
+      - ./init.cql:/init.cql
+      - ./init.sh:/init.sh
+    depends_on:
+      - scylladb
+    entrypoint: ["/bin/bash", "/init.sh"]
+    networks:
+      - scylla-network
+
+volumes:
+  scylla_data:
+
+networks:
+  scylla-network:
