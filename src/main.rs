@@ -35,7 +35,6 @@ async fn main() -> Result<()> {
     Ok(())
 }
 
-
 #[derive(Debug, FromRow)]
 struct User {
     user_id: Uuid,
