@@ -1,0 +1,1 @@
+# scylladb-basic-demo-rs
